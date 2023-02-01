@@ -24,7 +24,7 @@ describe('Create new user.', function() {
       cy.get('.ui-state-default').contains('15')
         .should('be.visible')
         .click({force: true});
-      cy.get(".form-create-account [name='email']").type("badizfs@gmail.com", {force: true});
+      cy.get(".form-create-account [name='email']").type("teobadizfs@gmail.com", {force: true});
       cy.get(".form-create-account [name='password']").type("Dany1977", {force: true});
       cy.get("[name='password_confirmation']").type("Dany1977", {force: true});
       cy.get(".form-create-account [type='submit']").click({force: true});
@@ -44,7 +44,7 @@ describe('Create new user.', function() {
       cy.get('.ui-state-default').contains('15')
         .should('be.visible')
         .click({force: true});
-      cy.get(".form-create-account [name='email']").type("badizfs@gmail.com", {force: true});
+      cy.get(".form-create-account [name='email']").type("teobadizfs@gmail.com", {force: true});
       cy.get(".form-create-account [name='password']").type("Dany1977", {force: true});
       cy.get("[name='password_confirmation']").type("Dany1977", {force: true});
       cy.get(".form-create-account [type='submit']").click({force: true});
