@@ -1,11 +1,11 @@
 {
-  "scripts":{
+  "scripts": {
     "start": ".\\node_modules\\.bin\\cypress open",
     "start_linux": "/node_modules/.bin/cypress open",
     "test": ".\\node_modules\\.bin\\cypress run",
     "test_linux": "/node_modules/.bin/cypress run"
   },
   "devDependencies": {
-    "cypress": "^12.3.0"
+    "cypress": "^12.5.1"
   }
 }
