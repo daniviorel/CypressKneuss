@@ -2,7 +2,7 @@ let config = Cypress.config()
 describe('Header', function () {
 
 beforeEach('before each test', function () {
-    cy.visit(`${config.baseUrl}/customer/account/create/`);
+    cy.visit(`${config.baseUrl}`);
     cy.get('button').contains('Nein danke!')
       .should('be.visible')
       .click({ force: true });
@@ -16,9 +16,9 @@ beforeEach('before each test', function () {
   });
 
   it('karriere', function () {
-    cy.visit(`${config.baseUrl}`);
-    cy.get('.top-link-product a[href="https://kneuss.com/karriere/"]').contains('Hier')
-      .click();
+    cy.get('.link-topbar').contains('Hier')
+      .should('be.visible') 
+      .click({ force: true });
   it("webpage redirect", () => {
     const page = {
         "from": "https://test.kneuss.com/",
