@@ -12,4 +12,4 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/tests/**/*.cy.{js,jsx,ts,tsx}',
   },
   'defaultCommandTimeout': 10000,
-})
+});
