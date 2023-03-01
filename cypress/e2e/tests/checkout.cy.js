@@ -2,7 +2,7 @@ let config = Cypress.config()
 describe('User login', function () {
 
   beforeEach('before each test', function () {
-    cy.visit(`${config.baseUrl}/customer/account/login/referer/aHR0cHM6Ly90ZXN0LmtuZXVzcy5jb20vY3VzdG9tZXIvYWNjb3VudC9pbmRleC8%2C/`);
+    cy.visit(`${config.baseUrl}/customer/account/login/`);
     cy.get('button').contains('Nein danke!')
       .should('be.visible')
       .click({ force: true });
