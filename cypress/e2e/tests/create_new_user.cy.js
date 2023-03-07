@@ -17,16 +17,16 @@ describe('Create new user.', function () {
   });
 
   it('create new user happyflow', function () {
-    cy.get("select[name='prefix']").select("Frau", { force: true });
-    cy.get("[name='firstname']").type("ada", { force: true });
-    cy.get("[name='lastname']").type("ada", { force: true });
+    cy.get("select[name='prefix']").select("Herr", { force: true });
+    cy.get("[name='firstname']").type("radu", { force: true });
+    cy.get("[name='lastname']").type("radu", { force: true });
     cy.get("[name='dob']").type("ada", { force: true });
     cy.get('.ui-state-default').contains('15')
       .should('be.visible')
       .click({ force: true });
-    cy.get(".form-create-account [name='email']").type("ada@radu.com", { force: true });
-    cy.get(".form-create-account [name='password']").type("ada_1234", { force: true });
-    cy.get("[name='password_confirmation']").type("ada_1234", { force: true });
+    cy.get(".form-create-account [name='email']").type("radu@radu.com", { force: true });
+    cy.get(".form-create-account [name='password']").type("Radu_1234", { force: true });
+    cy.get("[name='password_confirmation']").type("Radu_1234", { force: true });
     cy.get(".form-create-account [type='submit']").click({ force: true });
 
 
@@ -37,16 +37,16 @@ describe('Create new user.', function () {
   });
 
   it('create new user - already exists', function () {
-    cy.get("select[name='prefix']").select("Frau", { force: true });
-    cy.get("[name='firstname']").type("ada", { force: true });
-    cy.get("[name='lastname']").type("ada", { force: true });
-    cy.get("[name='dob']").type("ada", { force: true });
+    cy.get("select[name='prefix']").select("Herr", { force: true });
+    cy.get("[name='firstname']").type("radu", { force: true });
+    cy.get("[name='lastname']").type("radu", { force: true });
+    cy.get("[name='dob']").type("radu", { force: true });
     cy.get('.ui-state-default').contains('15')
       .should('be.visible')
       .click({ force: true });
-    cy.get(".form-create-account [name='email']").type("ada@radu.com", { force: true });
-    cy.get(".form-create-account [name='password']").type("ada_1234", { force: true });
-    cy.get("[name='password_confirmation']").type("ada_1234", { force: true });
+    cy.get(".form-create-account [name='email']").type("radu@radu.com", { force: true });
+    cy.get(".form-create-account [name='password']").type("Radu_1234", { force: true });
+    cy.get("[name='password_confirmation']").type("Radu_1234", { force: true });
     cy.get(".form-create-account [type='submit']").click({ force: true });
 
 
