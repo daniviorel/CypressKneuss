@@ -18,8 +18,8 @@ describe('User login', function () {
   //login user happyflow
 
   it('create login user - already exists', function () {
-    cy.get("[name='login[username]']").type("daniel.viorel@arcmedia.ch", { force: true });
-    cy.get("[name='login[password]']").type("Danyvio_1977", { force: true });
+    cy.get("[name='login[username]']").type("radu@radu.com", { force: true });
+    cy.get("[name='login[password]']").type("radu1234", { force: true });
     cy.get('button').contains('Anmelden')
       .should('be.visible')
       .click({ force: true });
