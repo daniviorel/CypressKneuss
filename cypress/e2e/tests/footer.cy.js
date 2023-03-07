@@ -18,7 +18,7 @@ describe('Footer', function () {
 //footer
   it('kontakt', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('.page-footer a[href="https://test.kneuss.com/contact"] span').contains('Kontakt')
+    cy.get('.menu-entries a[href="https://test.kneuss.com/contact"] span').contains('Kontakt')
       .should('be.visible')
       .click({ force: true });  
   it("webpage redirect", () => {
@@ -30,7 +30,7 @@ describe('Footer', function () {
     cy.visit(page.from, { failOnStatusCode: false });
 
     cy.url()
-        .should("be.equals", page.to)
+      .should("be.equals", page.to)
     });
   });
   
@@ -47,7 +47,7 @@ describe('Footer', function () {
     cy.visit(page.from, { failOnStatusCode: false });
 
     cy.url()
-        .should("be.equals", page.to)
+      .should("be.equals", page.to)
     });
   });
 });
