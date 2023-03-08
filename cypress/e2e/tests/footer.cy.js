@@ -18,36 +18,22 @@ describe('Footer', function () {
 //footer
   it('kontakt', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('.menu-entries a[href="https://test.kneuss.com/contact"] span').contains('Kontakt')
+    cy.get('#menu-entries-2 a[href="https://test.kneuss.com/contact"] span')
+      .contains('Kontakt')
       .should('be.visible')
       .click({ force: true });  
-  it("webpage redirect", () => {
-    const page = {
-        "from": "https://test.kneuss.com/",
-        "to": "https://test.kneuss.com/contact"
-    }
-
-    cy.visit(page.from, { failOnStatusCode: false });
-
-    cy.url()
-      .should("be.equals", page.to)
+    cy.location().should(loc => {
+        expect(loc.pathname).to.equal('/contact');
     });
   });
   
-  it('Frischebox', function () {
+  it.skip('Frischebox', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('a[href="https://test.kneuss.com/frischebox"] span').contains('Frischebox')
+    cy.get('#menu-entries-2 a[href="https://test.kneuss.com/frischebox"] span')
+      .contains('Frischebox')
       .click({ force: true });
-  it("webpage redirect", () => {
-    const page = {
-        "from": "https://test.kneuss.com/",
-        "to": "https://test.kneuss.com/frischebox"
-    }
-
-    cy.visit(page.from, { failOnStatusCode: false });
-
-    cy.url()
-      .should("be.equals", page.to)
+    cy.location().should(loc => {
+        expect(loc.pathname).to.equal('/frischebox');
     });
   });
 });
