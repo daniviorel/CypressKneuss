@@ -21,17 +21,20 @@ describe('Footer', function () {
     cy.get('#menu-entries-2 a[href="https://test.kneuss.com/contact"] span')
       .contains('Kontakt')
       .should('be.visible')
-      .click({ force: true });  
+      .click();
+
     cy.location().should(loc => {
         expect(loc.pathname).to.equal('/contact');
     });
   });
   
-  it.skip('Frischebox', function () {
+  it('frischebox', function () {
     cy.visit(`${config.baseUrl}`);
     cy.get('#menu-entries-2 a[href="https://test.kneuss.com/frischebox"] span')
       .contains('Frischebox')
-      .click({ force: true });
+      .should('be.visible')
+      .click();
+    
     cy.location().should(loc => {
         expect(loc.pathname).to.equal('/frischebox');
     });
